@@ -1,17 +1,30 @@
 import json
 
+with open('winter.json', 'r') as winter:
+  data = json.load(winter)
+  # print(data)
+
 with open('todos.json', 'r') as todos:
   data = json.load(todos)
 
-  count = 0
-  countFalse = 0 
+  completed = 0
+  incompleted = 0 
 
   for item in data:
     if item['completed']:
-      count += 1 
+      completed += 1 
 
     if not item['completed']:
-      countFalse += 1
+      incompleted += 1
 
-  print('Falsos:', countFalse, 'verdaderos', count)
+  print('Incompleated:', incompleted, 'Compleated:', completed)
       
+print('------------------------------------------------')
+
+# Calificacion mas alta
+# mas baja
+# agrupar por num de episodios 
+# lista de categorias
+
+
+
