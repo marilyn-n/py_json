@@ -13,19 +13,27 @@ def allCategories ():
 allCategories()
 
 # Calificacion mas alta
-  # max_score
+  # max_score and min_score
 def maxScore ():
   scores = []
   for i in animes['season']:
       if not i['score'] == None:
         scores.append(i['score'])
   return scores
+
 print('Maximum score is: ', end='')    
 print(max(maxScore()) )
+print('Minimum score is: ', end='')
+print(min(maxScore()) )
 
-# Calificacion mas baja
-  # min_score
-  
+# def minScore ():
+#   for m in animes['season']:
+#     print(m['score'])
+# minScore()    
+
+
+
+
 # agrupar por num de episodios 
   # episodes
 
