@@ -1,8 +1,33 @@
 import json
 
+# lista de categorias
+
 with open('winter.json', 'r') as winter:
-  data = json.load(winter)
-  # print(data)
+  animes = json.load(winter)
+
+def allCategories ():
+  for item in animes['season']:
+    for i in item['genre']:
+      print(i['name'])
+      
+allCategories()
+
+# Calificacion mas alta
+  # max_score
+def maxScore ():
+  scores = []
+  for i in animes['season']:
+      if not i['score'] == None:
+        scores.append(i['score'])
+  return scores
+print('Maximum score is: ', end='')    
+print(max(maxScore()) )
+
+# Calificacion mas baja
+  # min_score
+  
+# agrupar por num de episodios 
+  # episodes
 
 with open('todos.json', 'r') as todos:
   data = json.load(todos)
@@ -20,11 +45,3 @@ with open('todos.json', 'r') as todos:
   print('Incompleated:', incompleted, 'Compleated:', completed)
       
 print('------------------------------------------------')
-
-# Calificacion mas alta
-# mas baja
-# agrupar por num de episodios 
-# lista de categorias
-
-
-

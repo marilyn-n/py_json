@@ -1,10 +1,10 @@
-{  
-  "request_hash":"af4bb53365857359735dc6cf7b81460a293dee5d",
-  "request_cached":true,
-  "season_name":"Winter",
-  "season_year":2017,
-  "season":[  
-    {  
+ { 
+  "request_hash": "af4bb53365857359735dc6cf7b81460a293dee5d",
+  "request_cached": true,
+  "season_name": "Winter",
+  "season_year": 2017,
+  "season": [
+    { 
       "mal_id":32937,
       "url":"https:\/\/myanimelist.net\/anime\/32937\/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2",
       "title":"Kono Subarashii Sekai ni Shukufuku wo! 2",
