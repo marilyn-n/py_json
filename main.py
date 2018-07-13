@@ -14,17 +14,35 @@ def allCategories ():
 
 print(allCategories())
 print('Total of Anime Categories: ' + str(len(allCategories())))
+# --------------------------------------
 
+from collections import Counter
 
+def series ():
+  episodes = []
+  totalSeries = []
+  animes = season['season']
+
+  for anime in animes:
+    if not ((anime['episodes'] == None) or (anime['episodes'] in episodes)):
+      episodes.append(anime['episodes'])
+    if (len(anime) == ((len(episodes)))):
+      totalSeries.append(animes)
+      print('--------')
+      print('Hay ' + str(len(totalSeries)) + ' animes de ' + str(anime['episodes']) + ' episodios')
+  
+  return episodes, totalSeries
+
+series()
+
+# ---------------
 # 1 episodios: 1 animes
 # 2 episodios: 0 animes
 # 3 episodios: 0 animes
-# 4 episodios: 4 animes
+# 4 episodios: 2 animes
 # 5 episodios: 0 animes
-# 6 episodios: 0 animes
-# 7 episodios: 7 animes
-# 8 episodios: 0 animes
 # hay 3 animes de 10 episodios
+
 
 with open('winter.json', 'r') as winter:
   animes = json.load(winter)
@@ -56,7 +74,10 @@ with open('todos.json', 'r') as todos:
 
     if not item['completed']:
       incompleted += 1
-
-  print('Incompleated:', incompleted, 'Compleated:', completed)
       
-print('------------------------------------------------')
+print('Incompleated:', incompleted, 'Compleated:', completed)
+      
+print('---------------------------------------------')
+
+
+
