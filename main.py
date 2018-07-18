@@ -20,18 +20,23 @@ from collections import Counter
 
 def series ():
   episodes = []
-  totalSeries = []
   animes = season['season']
 
   for anime in animes:
     if not ((anime['episodes'] == None) or (anime['episodes'] in episodes)):
       episodes.append(anime['episodes'])
-    if (len(anime) == ((len(episodes)))):
-      totalSeries.append(animes)
-      print('--------')
-      print('Hay ' + str(len(totalSeries)) + ' animes de ' + str(anime['episodes']) + ' episodios')
-  
-  return episodes, totalSeries
+
+  episodes.sort()
+
+  for episode in episodes:
+    total = 0
+    for anime in animes:
+      if anime['episodes'] == episode:
+        total +=1
+    
+    print(str(total) + ' anime con ' + str(episode) + ' episodios')
+    print('**********************')
+  return episodes
 
 series()
 
